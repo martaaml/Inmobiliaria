@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Propiedades</title>
+</head>
+<body>
+
+<h2>Formulario de Registro de Propiedades</h2>
+<form action="funcionalidad.php" method="post" enctype="multipart/form-data">
+   
+    <!-- Desplegable para seleccionar el tipo de Vivienda -->
+    <label for="tipo">Tipo de Vivienda:</label>
+    <select name="tipo" id="tipo" required>
+        <option value="Piso">Piso</option>
+        <option value="Adosado">Adosado</option>
+        <option value="Chalet">Chalet</option>
+        <option value="Casa">Casa</option>
+    </select>
+    <br><br>
+
+    <!-- Desplegable para seleccionar la zona en la que esta el inmueble -->
+    <label for="zona">Zona:</label>
+    <select name="zona" id="zona" required>
+        <option value="Centro">Centro</option>
+        <option value="Zaidín">Zaidín</option>
+        <option value="Chana">Chana</option>
+        <option value="Albaicín">Albaicín</option>
+        <option value="Sacromonte">Sacromonte</option>
+        <option value="Realejo">Realejo</option>
+    </select>
+    <br><br>
+
+    <!--Elemento tipo text, el cual es para insertar la direccion del inmueble -->
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required>
+    <br><br>
+
+    <!-- Elemento para seleccionar el numero de dormitorios, mínimo 1 y máximo 5 -->
+    <label>Número de Dormitorios:</label>
+    <label for="dormitorio1">1</label>
+    <input type="radio" id="dormitorio1" name="dormitorios" value="1" checked>
+
+    <label for="dormitorio2">2</label>
+    <input type="radio" id="dormitorio2" name="dormitorios" value="2">
+
+    <label for="dormitorio3">3</label>
+    <input type="radio" id="dormitorio3" name="dormitorios" value="3">
+
+    <label for="dormitorio4">4</label>
+    <input type="radio" id="dormitorio4" name="dormitorios" value="4">
+
+    <label for="dormitorio5">5</label>
+    <input type="radio" id="dormitorio5" name="dormitorios" value="5">
+    <br><br>
+
+    <!-- Elemento tipo number, el cual es para introducir el precio del inmueble -->
+    <label for="precio">Precio (€):</label>
+    <input type="number" id="precio" name="precio" step="0.01" required>
+    <br><br>
+
+    <!-- Elemento de tipo number, el cual es para introducir los m2 del inmueble -->
+    <label for="tamano">Tamaño (m²):</label>
+    <input type="number" id="tamano" name="tamano" required>
+    <br><br>
+
+    <!--Checkbox seleccionables, por si tiene algunos extras-->
+    <label>Extras:</label>
+    <input type="checkbox" id="piscina" name="extras[]" value="Piscina">
+    <label for="piscina">Piscina</label>
+    
+    <input type="checkbox" id="jardin" name="extras[]" value="Jardín">
+    <label for="jardin">Jardín</label>
+    
+    <input type="checkbox" id="garaje" name="extras[]" value="Garaje">
+    <label for="garaje">Garaje</label>
+    <br><br>
+
+    <!-- Elemento tipo file, el cual es para añadir las fotos -->
+    <label for="foto">Foto:</label>
+    <input type="file" id="foto" name="foto" accept="image/*" >
+    <br><br>
+
+    <!-- Textarea el cual es para incluir las observaciones -->
+    <label for="observaciones">Observaciones:</label>
+    <textarea id="observaciones" name="observaciones"></textarea>
+    <br><br>
+
+    <input type="submit" value="Insertar vivienda">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../tarea3"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "INMOBILIARIA"
+	}
+}
